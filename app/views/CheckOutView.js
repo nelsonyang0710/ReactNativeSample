@@ -55,14 +55,16 @@ class CheckOutView extends Component {
 	}
 
 	shipToPressed() {
+		this.setState({message:' '}); // hack to make it look better when go to next View
 		this.props.navigator.push({id: 'ShippingInfoListView', shippingInfo: this.shippingInfo, previous:this});
 	}
 	payWithPressed() {
+		this.setState({message:' '}); // hack to make it look better when go to next View
 		this.props.navigator.push({id: 'PaymentMethodsListView', paymentInfo: this.paymentInfo, previous:this});
 	}
 	payNowPressed(){
 		this.setState({
-			message: 'Success'
+			message: 'Thank you for your payment!'
 		})
 	}
 	render() {
@@ -131,7 +133,7 @@ const styles = StyleSheet.create({
 		paddingBottom: 5
 	},
 	touchableH3: {
-		fontSize: 19,
+		fontSize: 18,
 		paddingTop: 5,
 		paddingBottom: 5
 	},

@@ -36,7 +36,8 @@ class ShippingInfoListView extends Component {
 	}
 
 	onShippingInfoPressed(shippingInfo) {
-		this.props.previous.setState({selectedShippingInfo:shippingInfo});
+		this.setState({message: ' '});
+		this.props.previous.setState({selectedShippingInfo:shippingInfo, message:null});
 		this.props.navigator.pop();
 	}
 }
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
 		paddingBottom: 5
 	},
 	touchableH3: {
-		fontSize: 19,
+		fontSize: 18,
 		paddingTop: 5,
 		paddingBottom: 5
 	},

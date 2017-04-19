@@ -43,8 +43,10 @@ class PaymentMethodsListView extends Component {
 				backupPaymentMethod = this.props.paymentInfo[index]
 			}
 		}
-		this.props.previous.setState({selectedPaymentMethod:paymentInfo, backupPaymentMethod:backupPaymentMethod});
+		this.setState({message: ' '});
+		this.props.previous.setState({selectedPaymentMethod:paymentInfo, backupPaymentMethod:backupPaymentMethod, message:null});
 		this.props.navigator.pop();
+
 	}
 }
 
